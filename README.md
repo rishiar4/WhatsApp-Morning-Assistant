@@ -24,7 +24,7 @@ Description of the files:
   6. run.sh/run.bat - These are executable files used to execute the program. (.sh and .bat files work for Unix and Windows based systems respectively.
   
  Working Demo of the project :
-    < insert link here >
+    https://www.linkedin.com/posts/rishabh-sharma7_nodejs-javascript-automation-activity-6680078170802184192-cZrM
     
  You can tweak the time according to your comfort and you are ready to go.
  Cheers.
