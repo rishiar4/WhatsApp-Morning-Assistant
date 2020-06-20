@@ -1,5 +1,5 @@
-# WhatsApp-Morning-Routine
-WhatsApp Morning Routine
+# WhatsApp-Morning-Assistant
+WhatsApp Morning Assistant
 
 This repository has the code for WhatApp Morning Assistant. 
 We all like to know some basic things about our day each day and move to different websites and apps, this project brings to you all that in your whatsapp chat. It can be simply used each morning to get all the basic information about the day. 
