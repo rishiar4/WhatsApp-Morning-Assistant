@@ -11,6 +11,7 @@ I have included some things like,
   5. News Headlines.
 
 All of the above are scraped using Puppetter and are real time data. These are being scraped at backend and return to you via messages on your phone.
+
 Requirements of the project is : puppetter needs to be installed in the working folder. 
    To install use npm ( npm install puppeteer )
 
