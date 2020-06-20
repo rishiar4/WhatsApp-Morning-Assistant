@@ -1,0 +1,6 @@
+{
+    "firstMsg" : "Welcome, The Setup is complete. To begin please type start. ",
+    "start" : 
+    "Press 1. To get a Quote. \nPress 2. To get Today's Horoscope. \nPress 3. To get Weather Forecast. \nPress 4. To get the day of the year. \nPress 5. News Headlines. \nPress 6. To Stop and Exit",
+    "quit" : "See you soon" 
+}
