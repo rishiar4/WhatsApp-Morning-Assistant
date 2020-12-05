@@ -30,8 +30,8 @@ let quotes = require("./quotes.json");
 
 
 
-    await tab.waitForSelector("._3FRCZ.copyable-text.selectable-text");
-    await tab.type("._3FRCZ.copyable-text.selectable-text", "Self");
+    await tab.waitForSelector("._1awRl.copyable-text.selectable-text");
+    await tab.type("._1awRl.copyable-text.selectable-text", "Self");
     await tab.keyboard.press("Enter");
 
     let welcomeMsg = allMsgs.firstMsg;
@@ -105,7 +105,7 @@ async function getNumbericReply(tab, browser) {
         setTimeout(await start(tab, browser), 3000);
     }
     else if (reply.localeCompare("3") == 0) {
-
+        console.log("__________________________1111111111111111111111111111");
         let we = llinks.weather;
 
         let newTab = await browser.newPage();
@@ -114,33 +114,36 @@ async function getNumbericReply(tab, browser) {
             waitUntil: "networkidle2"
         });
 
-        let phrases = await newTab.$$(".phrase");
+        // let phrases = await newTab.$$(".phrase");
 
-        console.log(phrases.length);
-        let innertext = await newTab.evaluate(function (element) {
-            let ans = element.textContent;
-            return ans;
-        }, phrases[0]);
+        // console.log(phrases.length);
+        // let innertext = await newTab.evaluate(function (element) {
+        //     let ans = element.textContent;
+        //     return ans;
+        // }, phrases[0]);
 
 
 
-        let High = await newTab.evaluate(function () {
-            let arr = document.querySelector(".temps .high");
-            console.log(arr.innerText);
-            return arr.innerText;
-        });
-        let Low = await newTab.evaluate(function () {
-            let arr = document.querySelector(".temps .low");
-            console.log(arr.innerText);
-            return arr.innerText;
-        });
+        // let High = await newTab.evaluate(function () {
+        //     let arr = document.querySelector(".info .temps .high");
+        //     console.log(arr.innerText);
+        //     return arr.innerText;
+        // });
+        // let Low = await newTab.evaluate(function () {
+        //     let arr = document.querySelector(".info .temps .low");
+        //     console.log(arr.innerText);
+        //     return arr.innerText;
+        // });
+
+        let High = "27/";
+        let Low = "13";
 
 
         let temperature = High + Low;
-
+        let innertext = "   Hazy sunshine Day. ";
         innertext = innertext.toLowerCase();
 
-        // console.log("LINE 142");
+        console.log("LINE 146");
 
         let final = "Weather Update, It will be a " + innertext.slice(3) + "Temperature for the day is " +  High + Low;
 
@@ -150,20 +153,14 @@ async function getNumbericReply(tab, browser) {
 
         await tab.waitForSelector("#main div.selectable-text[contenteditable]", { visible: true });
 
-
+        final = final.split("\n");
+        
         await tab.type("#main div.selectable-text[contenteditable]", final, { delay: 20 });
 
-        // await tab.keyboard.down("Shift");
-        // await tab.keyboard.press("Enter");
-        // await tab.keyboard.up("Shift");
-
-        // await tab.type("#main div.selectable-text[contenteditable]", innertext);
-        // await tab.keyboard.down("Shift");
-        // await tab.keyboard.press("Enter");
-        // await tab.keyboard.up("Shift");
-
-        // await tab.type("#main div.selectable-text[contenteditable]", temperature);
-
+        await tab.keyboard.down("Shift");
+        await tab.keyboard.press("Enter");
+        await tab.keyboard.up("Shift");
+        
         await tab.keyboard.press("Enter");
 
         setTimeout(await start(tab, browser), 3000);
