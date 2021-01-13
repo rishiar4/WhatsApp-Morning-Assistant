@@ -105,7 +105,7 @@ async function getNumbericReply(tab, browser) {
         setTimeout(await start(tab, browser), 3000);
     }
     else if (reply.localeCompare("3") == 0) {
-        console.log("__________________________1111111111111111111111111111");
+        // console.log("__________________________1111111111111111111111111111");
         let we = llinks.weather;
 
         let newTab = await browser.newPage();
@@ -135,8 +135,8 @@ async function getNumbericReply(tab, browser) {
         //     return arr.innerText;
         // });
 
-        let High = "27/";
-        let Low = "13";
+        let High = "21/";
+        let Low = "6";
 
 
         let temperature = High + Low;
